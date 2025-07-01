@@ -577,11 +577,6 @@
             "node": "WhatsApp Día 1",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 1",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -615,11 +610,6 @@
             "node": "WhatsApp Día 2",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 2",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -638,11 +628,6 @@
     "Wait Día 2-3": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 3",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 3",
             "type": "main",
@@ -680,11 +665,6 @@
             "node": "WhatsApp Día 4",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 4",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -703,11 +683,6 @@
     "Wait Día 4-5": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 5",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 5",
             "type": "main",
@@ -745,11 +720,6 @@
             "node": "WhatsApp Día 6",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 6",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -768,11 +738,6 @@
     "Wait Día 6-7": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 7",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 7",
             "type": "main",
@@ -799,11 +764,6 @@
             "node": "WhatsApp Día 8",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 8",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -822,11 +782,6 @@
     "Wait Día 8-9": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 9",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 9",
             "type": "main",
@@ -864,11 +819,6 @@
             "node": "WhatsApp Día 10",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 10",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -887,11 +837,6 @@
     "Wait Día 10-11": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 11",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 11",
             "type": "main",
@@ -918,11 +863,6 @@
             "node": "WhatsApp Día 12",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 12",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -945,11 +885,6 @@
             "node": "WhatsApp Día 13",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "WhatsApp Día 13",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -968,11 +903,6 @@
     "Wait Día 13-14": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 14",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 14",
             "type": "main",
@@ -1006,11 +936,6 @@
     "Wait Día 14-15": {
       "main": [
         [
-          {
-            "node": "WhatsApp Día 15",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "WhatsApp Día 15",
             "type": "main",
