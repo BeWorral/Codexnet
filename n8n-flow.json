@@ -1,10 +1,10 @@
 {
-  "name": "WooCommerce Followup HTTP",
+  "name": "Woo Order Completed Sequence",
   "nodes": [
     {
       "parameters": {
-        "path": "woocommerce-order-completed",
-        "httpMethod": "POST"
+        "httpMethod": "POST",
+        "path": "woocommerce-order-completed"
       },
       "name": "Webhook",
       "type": "n8n-nodes-base.webhook",
