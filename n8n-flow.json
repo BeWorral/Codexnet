@@ -1,0 +1,997 @@
+{
+  "name": "WooCommerce Followup",
+  "nodes": [
+    {
+      "parameters": {
+        "event": "Order Completed"
+      },
+      "name": "WooCommerce Trigger",
+      "type": "n8n-nodes-base.woocommerceTrigger",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        0
+      ],
+      "credentials": {
+        "woocommerceApi": "WooCommerce Main"
+      },
+      "id": 1
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_1_demo",
+        "variables": [
+          "Título: Día 1",
+          "Cuerpo: Bienvenida Emocional"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 1",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": 10
+    },
+    {
+      "parameters": {
+        "subject": "Día 1: Bienvenida Emocional",
+        "text": "Cuerpo: Bienvenida Emocional",
+        "to": "={{$json[\"billing\"][\"email\"]}}"
+      },
+      "name": "Email Día 1",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        200,
+        0
+      ],
+      "credentials": {
+        "smtp": "SMTP-Demo"
+      },
+      "id": 20
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 1-2",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        400,
+        0
+      ],
+      "id": 30
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_2_demo",
+        "variables": [
+          "Título: Día 2",
+          "Cuerpo: Autorregalo y Ritmo"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 2",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        600,
+        0
+      ],
+      "id": 40
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 2-3",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        800,
+        0
+      ],
+      "id": 50
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_3_demo",
+        "variables": [
+          "Título: Día 3",
+          "Cuerpo: Sala de Tareas"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 3",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        0
+      ],
+      "id": 60
+    },
+    {
+      "parameters": {
+        "subject": "Día 3: Sala de Tareas",
+        "text": "Cuerpo: Sala de Tareas",
+        "to": "={{$json[\"billing\"][\"email\"]}}"
+      },
+      "name": "Email Día 3",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        0
+      ],
+      "credentials": {
+        "smtp": "SMTP-Demo"
+      },
+      "id": 70
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 3-4",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        0
+      ],
+      "id": 80
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_4_demo",
+        "variables": [
+          "Título: Día 4",
+          "Cuerpo: Tip Constancia y Voz Alta"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 4",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        0
+      ],
+      "id": 90
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 4-5",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        0
+      ],
+      "id": 100
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_5_demo",
+        "variables": [
+          "Título: Día 5",
+          "Cuerpo: Progreso Peldaño a Peldaño"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 5",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        0
+      ],
+      "id": 110
+    },
+    {
+      "parameters": {
+        "subject": "Día 5: Progreso Peldaño a Peldaño",
+        "text": "Cuerpo: Progreso Peldaño a Peldaño",
+        "to": "={{$json[\"billing\"][\"email\"]}}"
+      },
+      "name": "Email Día 5",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        2200,
+        0
+      ],
+      "credentials": {
+        "smtp": "SMTP-Demo"
+      },
+      "id": 120
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 5-6",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        0
+      ],
+      "id": 130
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_6_demo",
+        "variables": [
+          "Título: Día 6",
+          "Cuerpo: Marcar Respuestas y Cerebro"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 6",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        2600,
+        0
+      ],
+      "id": 140
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 6-7",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2800,
+        0
+      ],
+      "id": 150
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_7_demo",
+        "variables": [
+          "Título: Día 7",
+          "Cuerpo: Aprovechar Trainings"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 7",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        3000,
+        0
+      ],
+      "id": 160
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 7-8",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        3200,
+        0
+      ],
+      "id": 170
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_8_demo",
+        "variables": [
+          "Título: Día 8",
+          "Cuerpo: Ebook para Viajar"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 8",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        3400,
+        0
+      ],
+      "id": 180
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 8-9",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        0
+      ],
+      "id": 190
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_9_demo",
+        "variables": [
+          "Título: Día 9",
+          "Cuerpo: Sala de Diálogos"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 9",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        3800,
+        0
+      ],
+      "id": 200
+    },
+    {
+      "parameters": {
+        "subject": "Día 9: Sala de Diálogos",
+        "text": "Cuerpo: Sala de Diálogos",
+        "to": "={{$json[\"billing\"][\"email\"]}}"
+      },
+      "name": "Email Día 9",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        4000,
+        0
+      ],
+      "credentials": {
+        "smtp": "SMTP-Demo"
+      },
+      "id": 210
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 9-10",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4200,
+        0
+      ],
+      "id": 220
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_10_demo",
+        "variables": [
+          "Título: Día 10",
+          "Cuerpo: Explorar Sala de Trainings"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 10",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        4400,
+        0
+      ],
+      "id": 230
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 10-11",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4600,
+        0
+      ],
+      "id": 240
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_11_demo",
+        "variables": [
+          "Título: Día 11",
+          "Cuerpo: Revisar Perfil"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 11",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        4800,
+        0
+      ],
+      "id": 250
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 11-12",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        5000,
+        0
+      ],
+      "id": 260
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_12_demo",
+        "variables": [
+          "Título: Día 12",
+          "Cuerpo: Recordar Propósito"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 12",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        5200,
+        0
+      ],
+      "id": 270
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 12-13",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        5400,
+        0
+      ],
+      "id": 280
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_13_demo",
+        "variables": [
+          "Título: Día 13",
+          "Cuerpo: Historia Real"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 13",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        5600,
+        0
+      ],
+      "id": 290
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 13-14",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        5800,
+        0
+      ],
+      "id": 300
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_14_demo",
+        "variables": [
+          "Título: Día 14",
+          "Cuerpo: Fase 1 Superada"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 14",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        6000,
+        0
+      ],
+      "id": 310
+    },
+    {
+      "parameters": {
+        "subject": "Día 14: Fase 1 Superada",
+        "text": "Cuerpo: Fase 1 Superada",
+        "to": "={{$json[\"billing\"][\"email\"]}}"
+      },
+      "name": "Email Día 14",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        6200,
+        0
+      ],
+      "credentials": {
+        "smtp": "SMTP-Demo"
+      },
+      "id": 320
+    },
+    {
+      "parameters": {
+        "value": 1,
+        "unit": "days"
+      },
+      "name": "Wait Día 14-15",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        6400,
+        0
+      ],
+      "id": 330
+    },
+    {
+      "parameters": {
+        "mode": "template",
+        "template": "dia_15_demo",
+        "variables": [
+          "Título: Día 15",
+          "Cuerpo: Encuesta NPS"
+        ],
+        "to": "={{$json[\"billing\"][\"phone\"]}}"
+      },
+      "name": "WhatsApp Día 15",
+      "type": "n8n-nodes-base.whatsAppCloudApi",
+      "typeVersion": 1,
+      "position": [
+        6600,
+        0
+      ],
+      "id": 340
+    },
+    {
+      "parameters": {
+        "subject": "Día 15: Encuesta NPS",
+        "text": "Cuerpo: Encuesta NPS",
+        "to": "={{$json[\"billing\"][\"email\"]}}"
+      },
+      "name": "Email Día 15",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        6800,
+        0
+      ],
+      "credentials": {
+        "smtp": "SMTP-Demo"
+      },
+      "id": 350
+    }
+  ],
+  "connections": {
+    "WooCommerce Trigger": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 1": {
+      "main": [
+        [
+          {
+            "node": "Email Día 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Día 1": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 1-2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 1-2": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 2": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 2-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 2-3": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 3": {
+      "main": [
+        [
+          {
+            "node": "Email Día 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Día 3": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 3-4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 3-4": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 4": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 4-5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 4-5": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 5": {
+      "main": [
+        [
+          {
+            "node": "Email Día 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Día 5": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 5-6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 5-6": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 6": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 6-7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 6-7": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 7": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 7-8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 7-8": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 8": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 8-9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 8-9": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 9": {
+      "main": [
+        [
+          {
+            "node": "Email Día 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Día 9": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 9-10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 9-10": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 10": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 10-11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 10-11": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 11": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 11-12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 11-12": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 12": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 12-13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 12-13": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 13": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 13-14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 13-14": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 14": {
+      "main": [
+        [
+          {
+            "node": "Email Día 14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Día 14": {
+      "main": [
+        [
+          {
+            "node": "Wait Día 14-15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Día 14-15": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Día 15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Día 15": {
+      "main": [
+        [
+          {
+            "node": "Email Día 15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
