@@ -1,2 +1,4 @@
 ## Workflow
-The file `n8n-flow.json` contains an n8n workflow triggered when a WooCommerce order is completed. A Webhook node listens for POST requests on the `woocommerce-order-completed` path. The workflow sends a WhatsApp message via an HTTP request every day for 15 days and on days 1, 3, 5, 9, 14 and 15 it also sends an email via another HTTP request node. Wait nodes pause one day between messages until the final email on day 15.
+The file `n8n-flow.json` defines an n8n workflow that starts with a Webhook node. It listens for POST requests on the path `woocommerce-order-completed` when a WooCommerce order is completed.
+
+Each day the workflow sends a WhatsApp message through an HTTP request node. On days 1, 3, 5, 9, 14 and 15, it also sends an email using another HTTP request node. A Wait node pauses the workflow for one day before moving to the next day, continuing this pattern until the final email on day 15.
